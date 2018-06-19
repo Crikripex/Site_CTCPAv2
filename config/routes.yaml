@@ -1,0 +1,31 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+  path: /
+  controller: App\Controller\IndexController::displayPage
+
+prestations:
+  path: /prestations
+  controller: App\Controller\PrestationsController::displayPage
+
+contact:
+  path: /contact
+  controller: App\Controller\ContactController::displayPage
+
+documentation:
+  path: /documentation
+  controller: App\Controller\DocumentationController::displayPage
+
+news:
+  path: /news
+  controller: App\Controller\NewsController::displayPage
+
+migration:
+  path: /migration
+  controller: App\Controller\CalculMigrationController::displayPage
+
+permeabilite:
+  path: /permeabilite
+  controller: App\Controller\CalculMigrationController::displayPage

@@ -1,0 +1,58 @@
+{% block body %}
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12 col-xl-12 col-md-6">
+                <br>
+                <!--<h3>CTCPAck, le laboratoire-expert d’analyse de vos emballages
+                    agroalimentaires, cosmétiques, médicaux.</h3><br>-->
+                <h4 class="d-sm-block d-md-none">CTCPAck, le laboratoire-expert d’analyse de vos emballages
+                    agroalimentaires, cosmétiques, médicaux.</h4><br>
+                <h4 class="d-none d-md-block d-lg-none">CTCPAck, le laboratoire-expert d’analyse de vos emballages
+                    agroalimentaires, cosmétiques, médicaux.</h4><br>
+                <h3 class="d-none d-lg-block">CTCPAck, le laboratoire-expert d’analyse de vos emballages
+                    agroalimentaires, cosmétiques, médicaux.</h3><br>
+                <p style="margin-top: 0; text-align: justify; text-justify: inner-word;">
+                    Fabricants et utilisateurs d’emballages notre équipe vous accompagne pour tous besoins d’analyses dans le cadre de vos études, litiges, essais et développements innovants. CTCPAck est une composante de prestations de service du CTCPA, centre technique industriel depuis 1950. Nos laboratoires de chimie et physicochimie des emballages vous accueillent sur le technopole Alimentec à Bourg en Bresse au Nord de Lyon.
+                </p>
+                <br>
+            </div>
+            <div class="col-lg-4 col-xl-4 col-md-6" >
+                <div class="card text-white bg-secondary mb-3"> <!-- style="max-width: 20rem;"-->
+                    <div class="card-header"><img src={{ asset('build/images/aze.3e9185e9.png') }} class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="card-body">
+                        <!--<h4 class="card-title">Primary card title</h4>-->
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/prestations"><i class="fa fa-book"></i> NOS PRESTATIONS</a>
+                        <br>
+                        <br>
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/contact"><i class=" fa fa-check-square-o"></i> DEMANDES D'ANALYSE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-4 col-md-6">
+                <div class="card text-white bg-secondary mb-3"><!-- style="max-width: 20rem;"-->
+                    <div class="card-header"><img src={{ asset('build/images/qsd.5ae17cc1.png') }} class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="card-body">
+                        <!--<h4 class="card-title">Secondary card title</h4>-->
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/documentation" ><i class="fa fa-flask"></i>LES 7 FONCTIONS DE L'EMBALLAGE</a>
+                        <br>
+                        <br>
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/news"><i class="fa fa-newspaper-o"></i> ACTUALITÉS PACKAGING</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-4 col-md-6">
+                <div class="card text-white bg-secondary mb-3" ><!-- style="max-width: 20rem;"-->
+                    <div class="card-header"><img src={{ asset('build/images/wxc.8761ad4b.png') }} class="img-responsive" style="width:100%" alt="Image"></div>
+                    <div class="card-body">
+                        <!--<h4 class="card-title">Success card title</h4>-->
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/migration" ><i class="fa fa-cog"></i> PRÉDICTION DE MIGRATION</a>
+                        <br>
+                        <br>
+                        <a type="button" class="btn btn-outline-secondary btn-lg" href="/permeabilite"><i class="fa fa-cog"></i> PERMEABILITÉ D'UN COMPLEXE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+{% endblock %}

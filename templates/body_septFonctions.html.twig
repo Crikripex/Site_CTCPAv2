@@ -1,0 +1,67 @@
+{% block body %}
+    <div class="container text-center d-none d-sm-none d-md-block">
+        <br>
+        <h1> Les 7 fonctions de l'emballage</h1>
+        <br>
+        <div class="row">
+            <div class="list-group col-lg-4 col-md-4 fonc">
+                {% for value in BDD %}
+                    {% if value.id == 0 %}
+                        <a href="#" class="list-group-item list-group-item-action disabled active focused" id="contain_{{ value.id }}">
+                            Cras justo odio
+                        </a>
+                    {% elseif (value.id%2) == 1 %}
+                        <a href="#" class="list-group-item list-group-item-action" id="contain_{{ value.id }}" >
+                            Dapibus ac facilisis in
+                        </a>
+                    {% elseif value.id%2 == 0 %}
+                        <a href="#" class="list-group-item list-group-item-action disabled" id="contain_{{ value.id }}" >
+                            Morbi leo risus
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="card border-success mb-3 col-md-7 fonc">
+                <div class="card-header" style="margin-left: 0px ; padding-right: 0px" id="display_titre">Header</div>
+                <div class="card-body" id="display_content">
+                    <h4 class="card-title">Success card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="container text-center d-block d-md-none">
+        <div class="list-group col-lg-4 col-md-4 fonc mobilePart">
+            <br>
+            <h1> Les 7 fonctions de l'emballage</h1>
+            <br>
+            {% for value in BDD %}
+                {% if value.id == 0 %}
+                    <a href="#" class="list-group-item list-group-item-action disabled active mobFocused" id="mobileTitle{{ value.id }}" data-toggle="collapse" data-target="#mobileContain{{ value.id }}" >
+                        Cras justo odio
+                    </a>
+                    <div class="collapse panel-collapse show" id="mobileContain{{ value.id }}">
+                        <div class="wrap-panel-collapse" style="padding: 0.75rem 1.25rem;">Sample text sample text sample text sample text</div>
+                    </div>
+                {% elseif (value.id%2) == 1 %}
+                    <a href="#" class="list-group-item list-group-item-action" id="mobileTitle{{ value.id }}" data-toggle="collapse" data-target="#mobileContain{{ value.id }}" >
+                        Dapibus ac facilisis in
+                    </a>
+                    <div class="collapse panel-collapse" id="mobileContain{{ value.id }}">
+                        <div class="wrap-panel-collapse" style="padding: 0.75rem 1.25rem;">Sample text sample text sample text sample text</div >
+                    </div>
+                {% elseif (value.id%2) == 0 %}
+                    <a href="#" class="list-group-item list-group-item-action disabled" id="mobileTitle{{ value.id }}" data-toggle="collapse" data-target="#mobileContain{{ value.id }}" >
+                        Morbi leo risus
+                    </a>
+                    <div class="collapse panel-collapse" id="mobileContain{{ value.id }}">
+                        <div class="wrap-panel-collapse" style="padding: 0.75rem 1.25rem;">Sample text sample text sample text sample text</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+{% endblock %}

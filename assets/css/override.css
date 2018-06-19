@@ -1,0 +1,46 @@
+/*@font-face {
+    font-family: 'Bahnschrift';
+    src: url('fonts/bahnschrift.ttf');
+}*/
+
+* {
+    font-family: "Noto Sans Mono CJK KR Bold";
+}
+
+.cluster-text{
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.language-text{
+    color: #1b4f72;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.slogan-text{
+    color: grey;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btn.btn-outline-secondary.btn-lg{
+    width: 100%;
+    overflow: hidden;
+}
+
+.card.bg-secondary{
+    background-color: #FFFFFF !important;
+    border: none;
+}
+.card-header{
+    background-color: #FFFFFF !important;
+    border: none;
+    max-height: 200px;
+    overflow: hidden;
+}

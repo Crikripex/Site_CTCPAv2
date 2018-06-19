@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% include 'stylesheet.html.twig' %}{% endblock %}
+</head>
+<body>
+{% block navbar %}{% include 'navbar.html.twig' %}{% endblock %}
+<div class="d-none" id="dataExtracted">
+    {% for entry in BDD %}
+        <div id="hiddenID{{ entry.id }}">
+            <div id="{{ entry.id }}_titre">
+                {{ entry.titleFr }}
+            </div>
+            <div id="{{ entry.id }}_titreEN">
+                {{ entry.titleEn }}
+            </div>
+            <div id="{{ entry.id }}_content">
+                {{ entry.contentFr }}
+            </div>
+            <div id="{{ entry.id }}_contentEN">
+                {{ entry.contentEn }}
+            </div>
+            <div id="{{ entry.id }}_media">
+                {{ entry.media }}
+            </div>
+            <div id="{{ entry.id }}_icon">
+                {{ entry.icon }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% block body %}{% include 'body_septFonctions.html.twig' %}{% endblock %}
+
+{% block footer %}{% include 'footer.html.twig' %}{% endblock %}
+<script type="text/javascript" src="{{ asset('build/documentationJs.js') }}"></script>
+</body>
+</html>
