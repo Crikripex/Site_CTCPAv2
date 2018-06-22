@@ -1,0 +1,156 @@
+{% block body %}
+    <br>
+    <div class="container text-center">
+
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12 card">
+                <div class="row" style="padding: 10px">
+                    <div class="col-12">
+                        <div class="row">
+                            <fieldset class="col-lg-6 col-md-6" aria-labelledby='legendEnvironments' role=group>
+                                <legend id='legendEnvironments'>
+                                    Milieux en contact
+                                </legend>
+                                Materiau
+                                <div class="input-group layer">
+                                    <select id='materialName' class=form-control required>
+                                        <!--<option value="'.$material['name'].'">'.$material['name']</option>-->
+                                    </select>
+                                </div>
+                                Masse Voluminque du materiau
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)?  id='PackagingVolumicMass' aria-describedby=unityPackagingVolumicMass>
+                                    <span class=input-group-addon id='unityPackagingVolumicMass'>gr/cm<sup>3</sup></span>
+                                </div>
+                                Masse volumique de l'aliment
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='foodVolumicMass' class='form-control' required min=0 max=2 placeholder="" aria-describedby=unityFoodVolumicMass>
+                                    <span class=input-group-addon id='unityFoodVolumicMass'>gr/cm<sup>3 </sup></span>
+                                </div>
+
+                            </fieldset>
+                            <fieldset class="col-lg-6 col-md-6" aria-labelledby=legendGeometricalCharacteristics role=group>
+                                <legend id='legendGeometricalCharacteristics'>
+                                    Caractéristiques géométriques
+                                </legend>
+                                épaisseur
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='packagingThickness' class=form-control required min=0 max=5000 placeholder="" aria-describedby=unityPackagingThickness>
+                                    <span class=input-group-addon id='unityPackagingThickness'>µm</span>
+                                </div>
+                                Surface de contact
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='contactSurface' class=form-control required min=0 max=100000 placeholder="" aria-describedby=unityContactSurface>
+                                    <span class=input-group-addon id='unityContactSurface'>cm<sup>2</sup></span>
+                                </div>
+                                Volume de l'aliment
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='foodVolume' class=form-control required min=0 max=2000000 placeholder="" aria-describedby=unityFoodVolume>
+                                    <span class=input-group-addon id='unityFoodVolume'>cm<sup>3</sup></span>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <fieldset class="col-lg-6 col-md-6" aria-labelledby=legendMigrantCharacteristics role=group>
+                                <legend id='legendMigrantCharacteristics'>
+                                    Caractéristiques du migrant
+                                </legend>
+                                Concentration
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='migrantConcentration' class=form-control required min=0 max=600000 placeholder="" aria-describedby=unityMigrantConcentration>
+                                    <span class=input-group-addon id='unityMigrantConcentration'>ppm</span>
+                                </div>
+                                Masse molaire
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='migrantMolarMass' class=form-control required min=0 max=10000 placeholder="" aria-describedby=unityMigrantMolarMass>
+                                    <span class=input-group-addon id='unityMigrantMolarMass'>gr/mole</span>
+                                </div>
+                                Coeficient de partage
+                                <br>
+                                <div id='nospan' class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='partitionCoefficient' class=form-control required min=0 max=100000 placeholder="">
+                                </div>
+                            </fieldset>
+                            <fieldset class="col-lg-6 col-md-6" aria-labelledby=legendConditions role=group>
+                                <legend id='legendConditions'>
+                                    Conditions de contact
+                                </legend>
+                                Temperature de contact
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='temperature' class=form-control required min=-273 placeholder="" aria-describedby=unityTemperature>
+                                    <span class=input-group-addon id='unityTemperature'>°C</span>
+                                </div>
+                                Temps de contact
+                                <br>
+                                <div class=input-group>
+                                    <input type=number pattern=[0-9]+([\.,][0-9]+)? step=0.01 id='time' class=form-control required min=0 max=87600 placeholder="" aria-describedby=unityTime>
+                                    <span class=input-group-addon id='unityTime'>h</span>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- résultats -->
+            <div id='results' class="card col-lg-4 offset-lg-1" style="max-height: 250px; margin-top: 20px">
+                <section class="row" aria-label="" role=dialog>
+                    <dl class="col-lg-6 col-md-6">
+                        <dt id='descriptionMigrationAtEquilibrium' role=heading>
+                            Migration à l'équilibre
+                        </dt>
+                        <dd aria-describedby=descriptionMigrationAtEquilibrium role=marquee>
+                            <output>
+                                <var id='migrationAtEquilibrium'>....</var>
+                            </output>
+                        </dd>
+                        <dt id='descriptionDistributionCoefficient' role=heading>
+                            Coefficient de diffusion
+                        </dt>
+                        <dd aria-describedby=descriptionDistributionCoefficient role=marquee>
+                            <output>
+                                <var id='distributionCoefficient'>....</var>
+                            </output>
+                        </dd>
+                        <dt id='descriptionMigrationRate' role=heading>
+                            Taux de migration
+                        </dt>
+                        <dd aria-describedby=descriptionMigrationRate role=marquee>
+                            <output>
+                                <var id='migrationRate'>....</var>
+                            </output>
+                        </dd>
+                    </dl>
+                    <dl class="col-lg-6 col-md-6">
+                        <dt id='descriptionMigration' role=heading>
+                            Migration (Parties par million (ppm))
+                        </dt>
+                        <dd aria-describedby=descriptionMigration role=dialog>
+                            <output>
+                                <samp id='result'>....</samp>
+                            </output>
+                        </dd>
+                    </dl>
+                </section>
+                <section class="well row" role=alertdialog>
+                    <h4></h4>
+                    <p role=alert></p>
+                    <br>
+                    <h4></h4>
+                    <p role=alert></p>
+                    <br>
+                </section>
+                <a class="btn btn-primary calcul" href="#" style="position: absolute; bottom: 0; " >Calculer</a>
+            </div>
+
+        </div>
+        <!--<input type="submit" value="Calculer" onclick="updateResults()">-->
+    </div>
+    <br>
+{% endblock %}

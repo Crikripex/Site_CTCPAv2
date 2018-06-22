@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Entity\MaterialsMigration;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,21 +16,16 @@ class CalculMigrationController extends AbstractController
 {
     public function displayPage()
     {
-        /*return new Response("
-        <html>
-            <body>
-            <a href='/'>Accueil</a>
-            <br>
-            Ceci sera ma page de documentattion
-                <nav>
-                    <ul><a href='/prestations'>Prestations</a></ul>
-                    <ul><a href='/documentation'>Documentation</a></ul>
-                    <ul><a href='/calculs'>Calculs</a></ul>
-                </nav>
-            </br>
-            </html>
-        ");*/
-        return $this->render('base.html.twig',[]);
+        $tab = $this->getInformationsFromDB();
+        $args['BDD'] = $tab;
 
+        return $this->render('outilMigration.html.twig',$args);
+
+    }
+
+    public function getInformationsFromDB(){
+        $repository = $this->getDoctrine()->getRepository(MaterialsMigration::class);
+        $datas = $repository->findAll();
+        return $datas;
     }
 }

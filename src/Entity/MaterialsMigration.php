@@ -49,5 +49,85 @@ class MaterialsMigration
      */
     private $temperatureEffect;
 
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTemperatureMax(): int
+    {
+        return $this->temperatureMax;
+    }
+
+    /**
+     * @param int $temperatureMax
+     */
+    public function setTemperatureMax(int $temperatureMax): void
+    {
+        $this->temperatureMax = $temperatureMax;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBarrierEffect(): int
+    {
+        return $this->barrierEffect;
+    }
+
+    /**
+     * @param int $barrierEffect
+     */
+    public function setBarrierEffect(int $barrierEffect): void
+    {
+        $this->barrierEffect = $barrierEffect;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTemperatureEffect(): int
+    {
+        return $this->temperatureEffect;
+    }
+
+    /**
+     * @param int $temperatureEffect
+     */
+    public function setTemperatureEffect(int $temperatureEffect): void
+    {
+        $this->temperatureEffect = $temperatureEffect;
+    }
+
 
 }

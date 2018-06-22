@@ -10,6 +10,7 @@ Encore
     .addEntry('css_file2', './assets/css/override.css')
     .addEntry('documentationJs','./assets/js/script7fonctions.js')
     .addEntry('prestationsJs','./assets/js/scriptPrestations.js')
+    .addEntry('migrationJs','./assets/js/scriptMigration.js')
     .addEntry('logoEmballage','./assets/images/logoo.png')
     .addEntry('logoCtcpa','./assets/images/ctcpa.png')
     .addEntry('temp1','./assets/images/aze.png')

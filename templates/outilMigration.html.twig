@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% include 'stylesheet.html.twig' %}{% endblock %}
+</head>
+<body>
+<div class="d-none">
+    {% for entry in BDD %}
+        <div id="hiddenID{{ entry.id }}">
+            <div id="nameMaterial{{ entry.id }}">
+                {{ entry.name }}
+            </div>
+            <div id="tempMaxMaterial{{ entry.id }}">
+                {{ entry.temperatureMax }}
+            </div>
+            <div id="barrierEffectMaterial{{ entry.id }}">
+                {{ entry.barrierEffect }}
+            </div>
+            <div id="tempEffectMaterial{{ entry.id }}">
+                {{ entry.temperatureEffect }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% block navbar %}{% include 'navbar.html.twig' %}{% endblock %}
+{% block body %}{% include 'body_migration.html.twig' %}{% endblock %}
+{% block javascripts %}{% endblock %}
+{% block footer %}{% include 'footer.html.twig' %}{% endblock %}
+<script src="{{ asset('build/migrationJs.js') }}"></script>
+</body>
+</html>

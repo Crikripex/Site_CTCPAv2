@@ -1,4 +1,5 @@
 var a = document.getElementById('dataExtracted').children.length;
+a+=1;
 for(i = 1; i < a; i++) {
     buffer = i + 1;
     document.getElementById("contain_" + i).innerHTML = "<i class='fa "+document.getElementById(i+'_icon').innerHTML+"'></i>"+document.getElementById(i + "_titre").innerHTML;

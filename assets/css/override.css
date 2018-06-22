@@ -44,3 +44,54 @@
     max-height: 200px;
     overflow: hidden;
 }
+
+.card.border-success.fonc{
+    width: max-content;
+    padding: 0;
+}
+
+.list-group.col-lg-4.col-md-4.fonc{
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 400px ;
+    overflow: scroll;
+}
+
+.page-title{
+    margin-bottom: 5%;
+}
+
+.panel-collapse {
+    position: relative;
+    display: block;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.news-item a:hover, .news-item a:visited, .news-item a:link, .news-item a:active{
+    text-decoration: none;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    color: #212529;
+}
+
+.carousel a{
+    color : white;
+}
+
+.couche{
+    border-style: solid;
+    border-color: #BBBBBB;
+    border-width: 1px;
+}
+
+.couche-center{
+    border-bottom: none;
+}
+
+materiauCouche select{
+    width: 100px;
+}
