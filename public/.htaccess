@@ -1,12 +1,13 @@
 server {
-    server_name domain.tld www.domain.tld;
-    root /var/www/project/public;
 
     Deny from all
     Allow from 37.97.69.85        # Sous-réseau Bourg
     Allow from 81.93.20.244                    # Sous-réseau Avignon
     Allow from 82.226.241.121                  # Mylène
     Allow from 127.0.0.1 ::1 localhost 192.168 # Local
+
+    server_name domain.tld www.domain.tld;
+    root /var/www/Site-CTCPAv2/public;
 
     location / {
         # try to serve file directly, fallback to index.php
