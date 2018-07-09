@@ -1,0 +1,46 @@
+{% block body %}
+<div class="container text-center">
+    <br>
+    <div class="page-title text-left">
+        <h1>Contact</h1>
+    </div>
+    <form> <!-- DEBUT DE LA BALISE FORMULAIRE-->
+    <div class="section-title text-left">
+        <h3>Vos coordonnées</h3>
+    </div>
+    <div class="row">
+        <div class="row col-12">
+            <div class="row col-10">
+                <div class="col-4 card">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                </div>
+                <div class="col-4 card">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                </div>
+                <div class="col-4 card">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                    <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input name="options" id="option1" autocomplete="off" checked="" type="radio"> Rapide
+                    </label>
+                    <label class="btn btn-primary active">
+                        <input name="options" id="option2" autocomplete="off" type="radio"> Détaillée
+                    </label>
+                </div>
+                <button type="button" class="btn btn-outline-secondary">Envoyer</button>
+            </div>
+        </div>
+        <div class="row col-12" style="margin-top: 50px">
+            <textarea class="form-control" id="exampleTextarea" rows="3" style="height: 122px;"></textarea>
+        </div>
+    </div>
+
+    </form><!-- FIN DE LA BALISE FORMULAIRE-->
+</div>
+{% endblock %}

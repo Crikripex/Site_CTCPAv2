@@ -29,7 +29,7 @@ class ContactController extends AbstractController
             </br>
             </html>
         ");*/
-        return $this->render('base.html.twig',[]);
+        return $this->render('contact.html.twig',[]);
 
     }
 }
