@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f41c81d1-98b3-4ef0-a01d-e0fdcf38a66b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/MyEnumType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/MyEnumType.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,12 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Type.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Type.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+            <state relative-caret-position="257">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormBuilder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/form/FormBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-495" />
           </provider>
         </entry>
       </file>
@@ -68,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyEnumType.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyEnumType.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Entity/MyEnumType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+            <state relative-caret-position="433">
+              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -91,15 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="25" column="184" selection-start-line="25" selection-start-column="184" selection-end-line="25" selection-end-column="184" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" selection-start-line="1" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -180,8 +178,8 @@
         <option value="$PROJECT_DIR$/src/Controller/ContactController.php" />
         <option value="$PROJECT_DIR$/templates/body_contact.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/News.php" />
-        <option value="$PROJECT_DIR$/src/Entity/MyEnumType.php" />
         <option value="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php" />
+        <option value="$PROJECT_DIR$/src/Entity/MyEnumType.php" />
       </list>
     </option>
   </component>
@@ -480,12 +478,12 @@
       <workItem from="1530524421782" duration="6152000" />
       <workItem from="1530793656335" duration="1893000" />
       <workItem from="1531122400556" duration="615000" />
-      <workItem from="1531213924623" duration="2389000" />
+      <workItem from="1531213924623" duration="3124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226047000" />
+    <option name="totallyTimeSpent" value="226782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
@@ -519,13 +517,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/flatly.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -816,17 +807,22 @@
         <state relative-caret-position="-77" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/MyEnumType.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/form/FormBuilder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-        </state>
+        <state relative-caret-position="-495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+        <state relative-caret-position="257">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/MyEnumType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
         </state>
       </provider>
     </entry>
