@@ -163,7 +163,7 @@ class News
     /**
      * @param \image $image
      */
-    public function setImage(\image $image): void
+    public function setImage(string $image): void
     {
         $this->image = $image;
     }
